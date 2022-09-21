@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h5>Sesi terakhir login: {{ last_login }}</h5>
 <h5>Nama: </h5>
 <b>{{nama}}</b>
 
@@ -19,5 +20,7 @@
         </tr>
     {% endfor %}
 </table>
+
+<button><a href="{% url 'wishlist:logout' %}">Logout</a></button>
 
 {% endblock content %}
